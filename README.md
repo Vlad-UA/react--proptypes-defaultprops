@@ -167,7 +167,7 @@ MyComponent.propTypes = {
 };
 ```
 
-##Requiring Single Child
+## Requiring Single Child
 With PropTypes.element you can specify that only a single child can be passed to a component as children.
 ```javascript
 import PropTypes from 'prop-types';
@@ -189,7 +189,7 @@ MyComponent.propTypes = {
 };
 ```
 
-##Default Prop Values
+## Default Prop Values
 ```javascript
 class Greeting extends React.Component {
   render() {
