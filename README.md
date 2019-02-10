@@ -17,7 +17,7 @@ Info about propTypes and defaultProps in React.
 npm install --save-dev prop-types <br>
 **For development only!**
 
-## Importing
+## Import
 import PropTypes from 'prop-types';
 
 ## Realisation
@@ -25,7 +25,11 @@ import PropTypes from 'prop-types';
 1. Standard
 ```javascript
 MyComponent.propTypes = {
-  children: PropTypes.element.isRequired
+  name: PropTypes.string.isRequired
+};
+
+MyComponent.defaultProps = {
+  name: 'stranger'
 };
 ```
 2. If use a Babel transform like transform-class-properties
