@@ -2,7 +2,7 @@
 Info about propTypes and defaultProps in React.
 
 ## What for?
-**propTypes** -- To run typechecking on the props for a component<br>
+**propTypes** -- To run typechecking on the props for a component (**in development mode only!**)<br>
 **defaultProps** -- define default values for your props
 
 
@@ -14,10 +14,33 @@ Info about propTypes and defaultProps in React.
 
 
 ## Installation
-npm install --save prop-types
+npm install --save-dev prop-types <br>
+**For development only!**
 
 ## Importing
 import PropTypes from 'prop-types';
+
+## Realisation
+
+1. Standard
+```javascript
+MyComponent.propTypes = {
+  children: PropTypes.element.isRequired
+};
+```
+2. If use a Babel transform like transform-class-properties
+ ```javascript
+ class MyComponent extends React.Component {
+    static propTypes = {
+        name: 'string'
+    }
+    
+    static defaultProps = {
+        name: 'stranger'
+    }
+ }
+ ```
+
 
 ## Types
 ```javascript
